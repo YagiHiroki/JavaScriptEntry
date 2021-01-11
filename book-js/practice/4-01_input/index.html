@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>テンプレート</title>
+        <link href="../../_common/image/favicon.ico" rel="shortcut icon">
+        <link href="http://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+        <link href="../../_common/css/style/css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>タイトル</h1>
+                <h2>タイトル</h2>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <section>
+                    <!-- 必要なHTMLはここ -->
+                    <form action="#" id="form">
+                        <input type="text" name="word">
+                        <input type="submit" value="検索">
+                    </form>
+                    <p id="output"></p>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <script>
+                'use script';
+
+                document.getElementById('form').onsubmit = function(){
+                    event.preventDefault();
+                    const  search = document.getElementById('form').word.value;
+                    document.getElementById('output').textContent =`「${search}」の検索中……`;
+                    console.log('クリックした');
+                }
+            </script>
+        </footer>
+    </body>
+</html>
